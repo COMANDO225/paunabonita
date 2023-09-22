@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Girasoles from "./Flowers";
+import Footer from "./Footer";
 
 const App = () => {
 	const numeroDeFlores = 2;
@@ -35,7 +36,9 @@ const App = () => {
 			<h1>
 				Toma bonita!
 				<br />
-				<small>(click para reproducirnos, pero las flores xd)</small>
+				<p className='text-lg'>
+					(click para reproducirnos, pero las flores xd)
+				</p>
 			</h1>
 			<div>
 				<Girasoles />
@@ -43,6 +46,7 @@ const App = () => {
 					<Girasoles key={index} {...flower} />
 				))}
 			</div>
+			<Footer />
 		</div>
 	);
 };

@@ -1,0 +1,260 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates");
+
+html {
+	background: linear-gradient(
+		to bottom,
+		#1e528e 0%,
+		#265889 50%,
+		#9da671 100%
+	);
+	cursor: pointer;
+}
+
+body {
+	height: 100vh;
+	overflow: hidden;
+	border-bottom: 10vh #339545 solid;
+	box-sizing: border-box;
+	position: relative;
+}
+
+h1 {
+	text-align: center;
+	color: white;
+	font-family: "Montserrat Alternates", sans-serif;
+	font-size: 40px;
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	top: 1rem;
+	transform: translate(0, 100vh);
+	-webkit-animation: move 1s 2.5s forwards;
+	animation: move 1s 2.5s forwards;
+}
+
+@-webkit-keyframes move {
+	0% {
+		transform: translate(0, 100vh);
+	}
+	100% {
+		transform: translate(0vh, 0);
+	}
+}
+
+@keyframes move {
+	0% {
+		transform: translate(0, 100vh);
+	}
+	100% {
+		transform: translate(0vh, 0);
+	}
+}
+.girasol {
+	width: 80vmin;
+	height: 80vmin;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 0%);
+}
+.girasol__hoja--left,
+.girasol__hoja--right {
+	width: 0%;
+	height: 20%;
+	border-radius: 0% 50% 0% 50%;
+	position: absolute;
+	background: #699649;
+	top: 70%;
+	left: 45%;
+	transform: translate(-100%, -50%) rotate(-20deg);
+	-webkit-animation: girasol__hoja forwards 1s 0.5s;
+	animation: girasol__hoja forwards 1s 0.5s;
+}
+.girasol__hoja--right {
+	top: 80%;
+	left: 55%;
+	transform: translate(0%, -50%) rotate(-70deg);
+}
+
+@keyframes girasol__hoja {
+	0% {
+		width: 0%;
+		border: 0px solid black;
+	}
+	100% {
+		width: 20%;
+		border: 2px solid black;
+	}
+}
+.girasol__tallo {
+	position: absolute;
+	transform: translate(-50%, 0%);
+	width: 5%;
+	height: 60%;
+	background: #699649;
+	left: 50%;
+	bottom: 0%;
+	border: 2px solid black;
+	-webkit-animation: girasol__tallo forwards 1s;
+	animation: girasol__tallo forwards 1s;
+}
+@-webkit-keyframes girasol__tallo {
+	0% {
+		height: 0;
+	}
+	100% {
+		height: 60%;
+	}
+}
+@keyframes girasol__tallo {
+	0% {
+		height: 0;
+	}
+	100% {
+		height: 60%;
+	}
+}
+.girasol__cabeshita {
+	border-radius: 50%;
+	background-color: #3c1f03;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	z-index: 2;
+	-webkit-animation: girasol__cabeshita 1s 1s forwards;
+	animation: girasol__cabeshita 1s 1s forwards;
+}
+@-webkit-keyframes girasol__cabeshita {
+	0% {
+		width: 0%;
+		height: 0%;
+	}
+	100% {
+		width: 25%;
+		height: 25%;
+	}
+}
+@keyframes girasol__cabeshita {
+	0% {
+		width: 0%;
+		height: 0%;
+	}
+	100% {
+		width: 25%;
+		height: 25%;
+	}
+}
+.girasol__pedal--1,
+.girasol__pedal--7,
+.girasol__pedal--12,
+.girasol__pedal--11,
+.girasol__pedal--10,
+.girasol__pedal--9,
+.girasol__pedal--8,
+.girasol__pedal--6,
+.girasol__pedal--5,
+.girasol__pedal--4,
+.girasol__pedal--3,
+.girasol__pedal--2 {
+	border-radius: 50%;
+	@apply bg-[#F7D303];
+	transform: translate(-50%, -50%);
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	-webkit-animation: grow-pedal-back 1s 1.5s forwards;
+	animation: grow-pedal-back 1s 1.5s forwards;
+}
+.girasol__pedal--2 {
+	transform: translate(-50%, -50%) rotate(30deg);
+}
+.girasol__pedal--3 {
+	transform: translate(-50%, -50%) rotate(60deg);
+}
+.girasol__pedal--4 {
+	transform: translate(-50%, -50%) rotate(90deg);
+}
+.girasol__pedal--5 {
+	transform: translate(-50%, -50%) rotate(120deg);
+}
+.girasol__pedal--6 {
+	transform: translate(-50%, -50%) rotate(150deg);
+}
+@-webkit-keyframes grow-pedal-back {
+	0% {
+		width: 0%;
+		height: 0%;
+		border: 0px solid black;
+	}
+	100% {
+		width: 15%;
+		height: 45%;
+		border: 2px solid black;
+	}
+}
+@keyframes grow-pedal-back {
+	0% {
+		width: 0%;
+		height: 0%;
+		border: 0px solid black;
+	}
+	100% {
+		width: 15%;
+		height: 45%;
+		border: 2px solid black;
+	}
+}
+.girasol__pedal--7,
+.girasol__pedal--12,
+.girasol__pedal--11,
+.girasol__pedal--10,
+.girasol__pedal--9,
+.girasol__pedal--8 {
+	border-radius: 20% 50% 20% 50%;
+	transform: translate(-50%, -50%) rotate(15deg);
+	-webkit-animation: grow-pedal-front 1s 2s forwards;
+	animation: grow-pedal-front 1s 2s forwards;
+}
+.girasol__pedal--8 {
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+.girasol__pedal--9 {
+	transform: translate(-50%, -50%) rotate(75deg);
+}
+.girasol__pedal--10 {
+	transform: translate(-50%, -50%) rotate(105deg);
+}
+.girasol__pedal--11 {
+	transform: translate(-50%, -50%) rotate(135deg);
+}
+.girasol__pedal--12 {
+	transform: translate(-50%, -50%) rotate(165deg);
+}
+@-webkit-keyframes grow-pedal-front {
+	0% {
+		height: 0%;
+		width: 0%;
+		border: 0px solid black;
+	}
+	100% {
+		height: 35%;
+		width: 10%;
+		border: 2px solid black;
+	}
+}
+@keyframes grow-pedal-front {
+	0% {
+		height: 0%;
+		width: 0%;
+		border: 0px solid black;
+	}
+	100% {
+		height: 35%;
+		width: 10%;
+		border: 2px solid black;
+	}
+}

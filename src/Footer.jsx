@@ -31,7 +31,7 @@ const Footer = () => {
 				<source src='audio/musicapecausa.mp3' type='audio/mpeg' />
 			</audio>
 			<div className='w-full flex justify-between fixed bottom-1 px-1.5 items-end z-[200]'>
-				<h2 className='text-sm font-medium text-white'>
+				<h2 className='text md:text-xl font-medium text-white'>
 					Powered by un feo
 				</h2>
 				<div className='mr-2 mb-2'>

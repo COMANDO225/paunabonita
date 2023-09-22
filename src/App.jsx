@@ -26,7 +26,10 @@ const App = () => {
 	};
 
 	return (
-		<div className='__almeyda'>
+		<div
+			id='__almeyda'
+			className='max-w-[100vh] w-full h-full overflow-hidden'
+		>
 			<div
 				className='fixed top-0 left-0 w-full h-full bg-transparent opacity-0 z-50'
 				onClick={() => {

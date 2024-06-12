@@ -37,10 +37,10 @@ const App = () => {
 				}}
 			/>
 			<h1>
-				Toma bonita!
+				Click si te gustan las 🌻!
 				<br />
 				<p className='text-lg'>
-					(click para reproducirnos, pero las flores xd)
+					(Reproduce la música con el botón de abajo)
 				</p>
 			</h1>
 			<div>
